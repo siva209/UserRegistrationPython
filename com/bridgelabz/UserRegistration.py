@@ -78,7 +78,7 @@ class UserRegistration:
 
    #User passwor rule 3
 
-    def userpassword(self):
+    def userpassword3(self):
 
           # user password with atleast one numeric number
           
@@ -90,6 +90,22 @@ class UserRegistration:
             else:
                 print("Invalid Password, Please enter valid password")
 
+    # User passwor rule 4
+
+    def userpassword4(self):
+
+        # user password with atleast one special character number
+
+        pattern8 = '^(?=.+[0-9])(?=.+[a-z])(?=.+[A-Z])(?=.+[@$#%*+]).{8,}$'
+
+        userpassword = input("Enter the Password : ")
+        if re.fullmatch(pattern8, userpassword):
+            print("Valid Password")
+
+        else:
+            print("Invalid Password, Please enter valid password")
+
+
 if __name__ == "__main__":
     user = UserRegistration()
     user.userfirstname()
@@ -98,3 +114,5 @@ if __name__ == "__main__":
     user.usermobilenumber()
     user.userpassword()
     user.userpassword2()
+    user.userpassword3()
+    user.userpassword4()
