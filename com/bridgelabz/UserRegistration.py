@@ -50,9 +50,25 @@ class UserRegistration:
         else:
             print("Invalid Mobile Number")
 
+
+
+
+    def userpassword(self):
+
+    #Passeword should be minimum 8 characters
+        pattern5='^[a-zA-Z]{8,}$'
+        userpassword = input("Enter the Password : ")
+        if re.fullmatch( pattern5, userpassword):
+            print("Valid Password")
+
+        else:
+            print("Invalid Password, Please enter valid password")
+
+
 if __name__ == "__main__":
     user = UserRegistration()
     user.userfirstname()
     user.userlastname()
     user.user_email()
     user.usermobilenumber()
+    user.userpassword()
