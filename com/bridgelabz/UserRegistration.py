@@ -42,7 +42,7 @@ class UserRegistration:
 
     def usermobilenumber(self):
 
-        patern4='^[91]{2}[ ]?[0-9]{10}$'
+        patern4= '^[91]{2}[ ]?[0-9]{10}$'
         usermobnumber = input("Enter the Mobile Number : ")
         if re.fullmatch(patern4, usermobnumber):
             print("Valid Mobile Number")
@@ -50,8 +50,7 @@ class UserRegistration:
         else:
             print("Invalid Mobile Number")
 
-
-
+    # User password Rule 1
 
     def userpassword(self):
 
@@ -64,6 +63,21 @@ class UserRegistration:
         else:
             print("Invalid Password, Please enter valid password")
 
+       #User password Rule 2
+
+    def userpassword2(self):
+
+
+            pattern6 = '^(?=.+[A-Z])[a-zA-Z0-9]{8,}$'
+            userpassword = input("Enter the Password : ")
+            if re.fullmatch(pattern6, userpassword):
+                print("Valid Password")
+
+            else:
+                print("Invalid Password, Please enter valid password")
+
+
+
 
 if __name__ == "__main__":
     user = UserRegistration()
@@ -72,3 +86,4 @@ if __name__ == "__main__":
     user.user_email()
     user.usermobilenumber()
     user.userpassword()
+    user.userpassword2()
