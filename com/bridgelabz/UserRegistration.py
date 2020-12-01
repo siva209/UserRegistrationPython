@@ -28,7 +28,20 @@ class UserRegistration:
         else:
             print("Invalid Name, Please enter proper name")
 
+ # User Email
+    def user_email(self):
+        pattern3= '^[a-zA-Z0-9]+([.+-_][a-z-A-Z0-9]+)*@[a-zA-Z0-9]+.[a-z]{2,3}([.][a-z]{2})*$'
+        user_email = input("Enter the Email Id : ")
+        if re.fullmatch(pattern3, user_email):
+         print("Valid Email Id")
+
+        else:
+          print("Invalid Emaild Id")
+
+
+
 if __name__ == "__main__":
     user = UserRegistration()
     user.userfirstname()
     user.userlastname()
+    user.user_email()
